@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Weather MC</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/8d2e6fd25d.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <link href="src/styles.css" rel="stylesheet" type="text/css" />
+  </head>
+  <style></style>
+
+  <body>
+    <div class="container">
+      <header><strong>Weather APP</strong></header>
+      <div class="row">
+        <div class="col">
+          <h3 id="current-date-time">Current Date</h3>
+          <div class="currentweather">
+            <h1><i class="fas fa-sun"></i></h1>
+            <h2 id="temperature"></h2>
+            <h1 id="city-name"></h1>
+            <div class="col">
+              <form id="search-form">
+                <input
+                  class="form-control"
+                  type="text"
+                  placeholder="Type a City"
+                  autocomplete="off"
+                  autofocus="on"
+                  id="search-text-input"
+                />
+                <button type="submit" class="btn btn-primary">Search</button>
+              </form>
+
+              <h5 id="searching-value"></h5>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <h3><i class="fas fa-cloud"></i>Tue</h3>
+          <h4>20ºC /<span>10ºC</span></h4>
+        </div>
+        <div class="col">
+          <h3><i class="fas fa-wind"></i>Wed</h3>
+          <h4>20ºC /<span>10ºC</span></h4>
+        </div>
+        <div class="col">
+          <h3><i class="fas fa-cloud-showers-heavy"></i>Thu</h3>
+          <h4>20ºC /<span>10ºC</span></h4>
+        </div>
+        <div class="col">
+          <h3><i class="fas fa-cloud-sun"></i>Fri</h3>
+          <h4>20ºC /<span>10ºC</span></h4>
+        </div>
+        <div class="col">
+          <h3><i class="fas fa-wind"></i>Sat</h3>
+          <h4>20ºC /<span>10ºC</span></h4>
+        </div>
+        <div class="col">
+          <h3><i class="fas fa-cloud"></i>Sun</h3>
+          <h4>20ºC /<span>10ºC</span></h4>
+        </div>
+        <br />
+      </div>
+      <footer>2019 Weather by Maggie</footer>
+    </div>
+  </body>
+  <script src="src/index.js"></script>
+</html>
