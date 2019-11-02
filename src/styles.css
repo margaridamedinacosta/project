@@ -44,6 +44,7 @@ footer {
 .fa-sun {
   font-size: 80px;
   color: #ffeb3b;
+  margin-left: 20px;
 }
 
 .container {
@@ -68,4 +69,14 @@ footer {
   background-color: #52aa5e;
   color: whitesmoke;
   border: #52aa5e;
+}
+
+#temperature {
+  margin-left: 20px;
+}
+#city-name {
+  margin-left: 20px;
+}
+#description {
+  margin-left: 20px;
 }

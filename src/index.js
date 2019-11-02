@@ -1,6 +1,10 @@
 function displayTemperature(response) {
   let temperature = document.querySelector("#temperature");
   temperature.innerHTML = `${Math.round(response.data.main.temp)}ºC`;
+  let weatherDescription = document.querySelector("#description");
+  console.log(
+    (weatherDescription.innerHTML = response.data.weather.description)
+  );
 }
 function search(event) {
   event.preventDefault();
