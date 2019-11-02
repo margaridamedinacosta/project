@@ -65,10 +65,10 @@ footer {
   border: #ffeb3b;
 }
 
-.btn-info {
-  background-color: #52aa5e;
+.btn-secondary {
+  background-color: #212121;
   color: whitesmoke;
-  border: #52aa5e;
+  border: #212121;
 }
 
 #temperature {

@@ -22,6 +22,12 @@ function search(event) {
   axios.get(`${apiUrl}`).then(displayTemperature);
 }
 
+function displayFahrenheitTemperature(event) {
+  let temperature = document.querySelector("#temperature");
+  let fahrenheitTemperature = (temperature * 9) / 5 + 32;
+  temperature.innerHTML = Math.round(fahrenheitTemperature);
+}
+
 let now = new Date();
 let currentDateTime = document.querySelector("#current-date-time");
 let date = now.getDate();
@@ -50,3 +56,6 @@ currentDateTime.innerHTML = `${days}, ${months} ${date}, ${year} - ${hours}:${mi
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);
+
+let fahrenheitButton = document.querySelector(".btn-secondary");
+fahrenheitButton.addEventListener("click", displayFahrenheitTemperature);
