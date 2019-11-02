@@ -3,6 +3,12 @@ function displayTemperature(response) {
   temperature.innerHTML = `${Math.round(response.data.main.temp)}ºC`;
   let weatherDescription = document.querySelector("#description");
   weatherDescription.innerHTML = response.data.weather[0].main;
+  let weatherIcon = document.querySelector("#icon");
+  weatherIcon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  weatherIcon.setAttribute("alt", response.data.weather[0].description);
 }
 function search(event) {
   event.preventDefault();
