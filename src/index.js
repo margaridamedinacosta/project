@@ -9,6 +9,7 @@ function displayTemperature(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   weatherIcon.setAttribute("alt", response.data.weather[0].description);
+  celsiusTemperature = response.data.main.temp;
 }
 function search(event) {
   event.preventDefault();
@@ -24,8 +25,13 @@ function search(event) {
 
 function displayFahrenheitTemperature(event) {
   let temperature = document.querySelector("#temperature");
-  let fahrenheitTemperature = (temperature * 9) / 5 + 32;
-  temperature.innerHTML = Math.round(fahrenheitTemperature);
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperature.innerHTML = `${Math.round(fahrenheitTemperature)}ºF`;
+}
+
+function displayCelsiusTemperature(event) {
+  let temperature = document.querySelector("#temperature");
+  temperature.innerHTML = `${Math.round(celsiusTemperature)}ºC`;
 }
 
 let now = new Date();
@@ -54,8 +60,13 @@ let hours = now.getHours();
 let minutes = now.getMinutes();
 currentDateTime.innerHTML = `${days}, ${months} ${date}, ${year} - ${hours}:${minutes}`;
 
+let celsiusTemperature = null;
+
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);
 
-let fahrenheitButton = document.querySelector(".btn-secondary");
+let fahrenheitButton = document.querySelector(".btn-secondary-f");
 fahrenheitButton.addEventListener("click", displayFahrenheitTemperature);
+
+let celsiusButton = document.querySelector(".btn-secondary-c");
+celsiusButton.addEventListener("click", displayCelsiusTemperature);

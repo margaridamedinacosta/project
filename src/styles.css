@@ -65,7 +65,12 @@ footer {
   border: #ffeb3b;
 }
 
-.btn-secondary {
+.btn-secondary-f {
+  background-color: #212121;
+  color: whitesmoke;
+  border: #212121;
+}
+.btn-secondary-c {
   background-color: #212121;
   color: whitesmoke;
   border: #212121;
