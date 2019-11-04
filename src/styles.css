@@ -41,14 +41,8 @@ footer {
   color: #212121;
 }
 
-.fa-sun {
-  font-size: 80px;
-  color: #ffeb3b;
-  margin-left: 20px;
-}
-
 .container {
-  background-color: #eeeeee;
+  background-color: #e0e0e0;
 }
 
 .currentweather {
